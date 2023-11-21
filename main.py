@@ -1,7 +1,7 @@
 from ymDef import getAudio, getVideo, getPlaylist
 
 
-if __name__ == '__main__':
+def main():
     while True:
         print('=======YOUTUBE_MANAGER=========')
         print('1. Скачать видео\n2. Скачать только аудио\n3. Скачать плейлист\n4. Выйти')
@@ -15,3 +15,6 @@ if __name__ == '__main__':
             getPlaylist()
         elif a == '4':
             break
+
+if __name__ == '__main__':
+    main()
