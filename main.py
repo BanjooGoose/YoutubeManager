@@ -4,7 +4,7 @@ from ymDef import getAudio, getVideo, getPlaylist
 def main():
     while True:
         print('=======YOUTUBE_MANAGER=========')
-        print('1. Скачать видео\n2. Скачать только аудио\n3. Скачать плейлист\n4. Выйти')
+        print('1. Download video\n2. Download audio only\n3. Download playlist\n4. Exit')
         print('===============================')
         a = input()
         if a == '1':
@@ -15,6 +15,7 @@ def main():
             getPlaylist()
         elif a == '4':
             break
+
 
 if __name__ == '__main__':
     main()

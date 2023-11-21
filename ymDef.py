@@ -14,15 +14,14 @@ def getStream():
     print("Title: ", yt.title)
     return yt
     
-
 def getAudio():
     yd = getStream().streams.get_audio_only()
-    yd.download('C:/Syncthing/PhoneLib/Podcasts')
+    yd.download('./Downloads')
     print("Success!!")
 
 def getVideo():
     yd = getStream().streams.get_by_resolution('360p')
-    yd.download('C:/Syncthing/PhoneLib/Video')
+    yd.download('./Downloads')
     print("Success!!")
 
 def getPlaylist():
@@ -33,5 +32,5 @@ def getPlaylist():
         counter += 1
         video = video.streams.get_by_resolution('360p')
         print(f'{counter} {video.title}')
-        video.download(f'C:/Syncthing/PhoneLib/Video/{yp.title}', filename_prefix=f'{counter} ')
+        video.download(f'./Downloads/{yp.title}', filename_prefix=f'{counter} ')
     print("Success!!")
